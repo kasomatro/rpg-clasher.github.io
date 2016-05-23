@@ -1,4 +1,6 @@
-﻿define([
+﻿/// <reference path="../vendor/phaser.js" />
+
+define([
     "Phaser"
 ], function (Phaser) {
 
@@ -12,6 +14,7 @@
 
         create: function () {
             this.game.state.start("GameOver");
+          this.game.  
         },
     };
 
