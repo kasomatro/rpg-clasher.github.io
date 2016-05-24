@@ -23,7 +23,7 @@
 
             //  Next we load the tileset. This is just an image, loaded in via the normal way we load images:
 
-            this.game.load.image('tiles', 'assets/tilemaps/maps/tileSet.png');
+            this.game.load.image('tiles', 'assets/tilemaps/maps/tileSet.png' );
 
         },
 
