@@ -14,7 +14,7 @@ define([
 
         create: function () {
             this.game.state.start("GameOver");
-          this.game.  
+           
         },
     };
 
