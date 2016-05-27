@@ -15,6 +15,6 @@ E:\Projects\RPGClashers\RPGClashers\RPGClashers\bin\RPGClashers.dll
 E:\Projects\RPGClashers\RPGClashers\RPGClashers\bin\RPGClashers.pdb
 E:\Projects\RPGClashers\RPGClashers\RPGClashers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Projects\RPGClashers\RPGClashers\RPGClashers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Projects\RPGClashers\RPGClashers\RPGClashers\obj\Debug\RPGClashers.csprojResolveAssemblyReference.cache
 E:\Projects\RPGClashers\RPGClashers\RPGClashers\obj\Debug\RPGClashers.dll
 E:\Projects\RPGClashers\RPGClashers\RPGClashers\obj\Debug\RPGClashers.pdb
+E:\Projects\RPGClashers\RPGClashers\RPGClashers\obj\Debug\RPGClashers.csprojResolveAssemblyReference.cache
