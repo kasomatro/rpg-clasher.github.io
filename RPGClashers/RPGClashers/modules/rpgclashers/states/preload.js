@@ -21,7 +21,7 @@
 
             this.game.load.tilemap('testPoke', 'assets/tilemaps/maps/map.json', null, Phaser.Tilemap.TILED_JSON);
             this.game.load.image('tiles', 'assets/tilemaps/maps/tileSet.png');
-            this.game.load.spritesheet('skeleton', 'assets/characters/skeleton.png', 64, 64);
+            this.game.load.spritesheet('skeleton', 'assets/characters/orc.png', 64, 64);
 
         },
 

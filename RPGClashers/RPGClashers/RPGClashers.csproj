@@ -66,7 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\characters\skeleton.png" />
+    <Content Include="assets\characters\orc.png" />
     <Content Include="assets\tilemaps\maps\tileSet.png" />
     <Content Include="packages.config" />
     <Content Include="modules\rpgclashers\vendor\phaser.map" />

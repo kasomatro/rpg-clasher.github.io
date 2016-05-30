@@ -31,7 +31,7 @@ define([
 
             this.sprite.animations.add('walk', [143,144,145,146,147,148,149,150,151]);
 
-            this.sprite.animations.play('walk', 10, true);
+            this.sprite.animations.play('walk', 30, true);
 
             //this.game.state.start("GameOver");
         },
