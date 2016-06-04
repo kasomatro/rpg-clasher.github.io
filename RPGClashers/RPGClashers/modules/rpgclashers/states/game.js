@@ -10,6 +10,8 @@ define([
    
     var sprite;
     var cursors;
+    var walkSpeed = 10;
+    var positionChange = 2;
     var GameState = function (game) {
 
     };
@@ -29,19 +31,32 @@ define([
             this.cursors = this.game.input.keyboard.createCursorKeys();
             this.sprite = this.game.add.sprite(300, 200, 'skeleton');
 
-            this.sprite.animations.add('walk', [143,144,145,146,147,148,149,150,151]);
+            this.sprite.animations.add('walkRight', [143, 144, 145, 146, 147, 148, 149, 150, 151]);
+            this.sprite.animations.add('walkLeft', [117, 118, 119, 120, 121, 122, 123, 124, 125]);
+            this.sprite.animations.add('walkUp', [104, 105, 106, 107, 108, 109, 110, 111, 112]);
+            this.sprite.animations.add('walkDown', [130,131,132,133,134,135,136,137,138]);
+            
 
-            this.sprite.animations.play('walk', 30, true);
+            
 
             //this.game.state.start("GameOver");
         },
 
-        //update: function () {
-        //    if (this.cursors.up.isDown) {
-        //        sprite.position.y -= 8;
-
-        //    }
-        //}
+        update: function () {
+            if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+                this.sprite.animations.play('walkLeft', walkSpeed, true);
+                this.sprite.x -= positionChange;
+            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+                this.sprite.animations.play('walkRight', walkSpeed, true);
+                this.sprite.x += positionChange;
+            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+                this.sprite.animations.play('walkUp', walkSpeed, true);
+                this.sprite.y -= positionChange;
+            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+                this.sprite.animations.play('walkDown', walkSpeed, true);
+                this.sprite.y += positionChange;
+            }
+        }
     };
 
     return GameState;
