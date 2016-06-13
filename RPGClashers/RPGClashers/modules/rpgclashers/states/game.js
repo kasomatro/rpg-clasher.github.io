@@ -1,4 +1,5 @@
-﻿/// <reference path="../vendor/phaser.js" />
+﻿/// <reference path="preload.js" />
+/// <reference path="phaser - Copy.js" />
 
 
 define([
@@ -22,9 +23,9 @@ define([
         
         create: function () {
             this.game.stage.backgroundColor = '#787878';
-            
+               
             this.map = this.game.add.tilemap('testPoke');
-
+            
             this.map.addTilesetImage('PathAndObjects', 'tiles');
             this.layer = this.map.createLayer('ground1');
             this.layer.resizeWorld();
@@ -36,26 +37,30 @@ define([
             this.sprite.animations.add('walkUp', [104, 105, 106, 107, 108, 109, 110, 111, 112]);
             this.sprite.animations.add('walkDown', [130,131,132,133,134,135,136,137,138]);
             
+            this.cursors = this.game.input.keyboard.createCursorKeys();
 
-            
+            this.camera.follow(this.sprite, Phaser.Camera.FOLLOW_LOCKON);
 
             //this.game.state.start("GameOver");
         },
 
         update: function () {
-            if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+            if (this.cursors.left.isDown) {
                 this.sprite.animations.play('walkLeft', walkSpeed, true);
                 this.sprite.x -= positionChange;
-            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+            } else if (this.cursors.right.isDown) {
                 this.sprite.animations.play('walkRight', walkSpeed, true);
                 this.sprite.x += positionChange;
-            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+            } else if (this.cursors.up.isDown) {
                 this.sprite.animations.play('walkUp', walkSpeed, true);
                 this.sprite.y -= positionChange;
-            } else if (this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+            } else if (this.cursors.down.isDown) {
                 this.sprite.animations.play('walkDown', walkSpeed, true);
                 this.sprite.y += positionChange;
+            } else {
+                this.sprite.animations.stop();
             }
+           
         }
     };
 
