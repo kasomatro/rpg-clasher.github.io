@@ -13,6 +13,7 @@ define([
     var cursors;
     var walkSpeed = 10;
     var positionChange = 2;
+    
     var GameState = function (game) {
 
     };
@@ -48,15 +49,19 @@ define([
             if (this.cursors.left.isDown) {
                 this.sprite.animations.play('walkLeft', walkSpeed, true);
                 this.sprite.x -= positionChange;
+                
             } else if (this.cursors.right.isDown) {
                 this.sprite.animations.play('walkRight', walkSpeed, true);
                 this.sprite.x += positionChange;
+                
             } else if (this.cursors.up.isDown) {
                 this.sprite.animations.play('walkUp', walkSpeed, true);
                 this.sprite.y -= positionChange;
+                
             } else if (this.cursors.down.isDown) {
                 this.sprite.animations.play('walkDown', walkSpeed, true);
                 this.sprite.y += positionChange;
+                
             } else {
                 this.sprite.animations.stop();
             }

@@ -1,8 +1,10 @@
 ﻿/// <reference path="E:\Projects\RPGClashers\RPGClashers\RPGClashers\vendor/require.js" />
 
 requirejs.config({
+    
     paths: {
-        Phaser: "vendor/phaser"
+
+        'Phaser': "vendor/phaser"
     }
 });
 
